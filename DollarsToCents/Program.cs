@@ -1,8 +1,7 @@
 ﻿bool RunProgram = true;
-bool QuestionAgain = true;
 while (RunProgram){
 
-    Console.WriteLine("Enter a sum to convert from dollars to pennies");
+    Console.WriteLine("Enter a sum to convert from dollars to pennies(whole numbers only)");
     string response = Console.ReadLine();
     if (int.TryParse(response, out var ResponseInt)){
         int ConvertedInt = (100 * ResponseInt);
@@ -10,10 +9,9 @@ while (RunProgram){
     }
     else{
         Console.WriteLine("invalid input");
-        RunProgram = true;
-        QuestionAgain = false;
     }
 
+    bool QuestionAgain = true;
     while (QuestionAgain){
         Console.WriteLine("Do you want to run another conversion? Y/N");
         string response2 = Console.ReadLine().ToUpper();
@@ -28,7 +26,6 @@ while (RunProgram){
         }
         else{
             Console.WriteLine("Please enter Y or N");
-            QuestionAgain = true;
         }
     }
 }
