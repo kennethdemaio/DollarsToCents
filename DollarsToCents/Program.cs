@@ -3,8 +3,8 @@ while (RunProgram){
 
     Console.WriteLine("Enter a sum to convert from dollars to pennies(whole numbers only)");
     string response = Console.ReadLine();
-    if (int.TryParse(response, out var ResponseInt)){
-        int ConvertedInt = (100 * ResponseInt);
+    if (float.TryParse(response, out var ResponseInt)){
+        float ConvertedInt = (100 * ResponseInt);
         Console.WriteLine("If we convert " + ResponseInt + "$ to pennies we will have " + ConvertedInt + "¢ cents");
     }
     else{
